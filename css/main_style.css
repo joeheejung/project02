@@ -1,0 +1,630 @@
+@charset "utf-8";
+
+/* 전체 여백 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 기본 꾸미기 */
+body {
+    font-family: 'Pretendard';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3a3632;
+}
+
+#wrap {
+    min-width: 1320px;
+}
+
+/* ------------- header ------------ */
+.header_wrap {
+    /* position 부모요소/ .submenu의 기준점 */
+    position: relative;
+    background-color: #ede6d8;
+}
+
+#header {
+    width: 1320px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.logo {
+    padding-top: 22px;
+}
+
+.util {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+    padding-top: 10px;
+}
+
+.gnb {
+    display: flex;
+    padding-top: 30px;
+}
+
+.gnb>li>a {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 26px;
+    padding-bottom: 24px;
+}
+
+.gnb>li>a:hover {
+    color: #4e5a4a;
+}
+
+.gnb li:hover .submenu {
+    display: block;
+    /* 마우스 호버 시 서브메뉴가 나타남 */
+}
+
+/* submenu */
+.submenu {
+    width: 100%;
+    background-color: #4e5a4a;
+    color: #ede6d8;
+    padding: 30px 0;
+
+    /* position 자식요소 */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 99;
+
+    /* submenu 숨기기 */
+    display: none;
+}
+
+.inner_submenu {
+    width: 1024px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.inner_submenu li {
+    /* position 부모요소/ li::before의 기준점 */
+    position: relative;
+    margin-left: 30px;
+    padding-left: 30px;
+}
+
+.inner_submenu li::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: #ede6d8;
+    opacity: 0.3;
+
+    /* position 자식요소 */
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+.inner_submenu li:first-child::before {
+    display: none;
+}
+
+.inner_submenu li a:hover {
+    color: #f4d58d;
+}
+
+
+/* ------------- slide swiper ------------ */
+#banner .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner .visual {
+    height: 800px;
+}
+
+/* ------------- section1 - brand intro------------ */
+#section1 {
+    width: 100%;
+    height: 750px;
+    background-color: #FFFCF5;
+}
+
+.inner_section1 {
+    width: 1100px;
+    height: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner_section1 p {
+    margin: 30px 0 50px 0;
+}
+
+.content {
+    text-align: center;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+.content p span {
+    font-weight: 800;
+}
+
+.images {
+    width: 453px;
+    height: 380px;
+    border-radius: 160px;
+    overflow: hidden;
+}
+
+.images img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.button a {
+    /* background-color: cadetblue; */
+    border: 1px solid #3a3632;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0 4px;
+}
+
+/* ------------- section2 - list------------ */
+.list {
+    width: 1320px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background-color: #4e5a4a;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 38px;
+    box-sizing: border-box;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.circle2 {
+    width: 120px;
+    height: 120px;
+    background-color: #4e5a4a;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 30px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.list li a p {
+    font-weight: 500;
+}
+
+.circle2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------- section3 - main banner ------------ */
+#section3 {
+    width: 100%;
+    height: 400px;
+    background: #f4d58d url(../imges/main/main_banner.jpg) no-repeat center/ 100% auto;
+    margin: 0 auto;
+
+}
+
+.inner_section3 {
+    width: 1320px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.inner_section3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#section3 button {
+    display: inline-block;
+}
+
+.inner_section3 span {
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.inner_section3 p {
+    font-size: 26px;
+    margin-bottom: 70px;
+}
+
+
+/* ------------------- section4 -------------------- */
+#section4 .swiper {
+    width: 100%;
+    margin: 0 auto;
+    height: 75%;
+}
+
+#section4 .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+#section4 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section4 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section4 {
+    width: 100%;
+    height: 900px;
+    background-color: #FFFCF5;
+}
+
+#section4 .vertical {
+    height: 400px;
+    transform: translateY(40px);
+}
+
+#section4 .vertical img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+#section4 .best_tit {
+    display: none;
+}
+
+#section4 .horizontal img:hover {
+    display: block;
+}
+
+
+#section4 .horizontal {
+    height: 250px;
+    transform: translateY(100px);
+}
+
+
+#section4 .horizontal img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.section4_title {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+
+/* ------------------- section5 -------------------- */
+#section5 .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#section5 .swiper-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#section5 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section5 .swiper_section5 {
+    width: 430px;
+    height: 530px;
+    border-radius: 55px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding: 0 38px;
+    box-sizing: border-box;
+}
+
+#section5 .visual_swiper {
+    width: 430px;
+    height: 530px;
+    border-radius: 55px;
+    overflow: hidden;
+}
+
+#section5 .visual_swiper img {
+    display: block;
+    width: 360px;
+    height: 400px;
+    border-radius: 40px;
+}
+
+#section5 .visual_swiper p {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, -29px);
+}
+
+:root {
+    --swiper-theme-color: #ffffff;
+}
+
+#section5 .swiper-pagination-bullet {
+    color: #fff;
+    opacity: 1;
+}
+
+#section5 {
+    width: 100%;
+    height: 900px;
+    background: url(../imges/main/main5_0.jpg) no-repeat center/ 100% auto;
+}
+
+.inner_section5 {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+    align-items: center;
+    color: #ede6d8;
+}
+
+.text_section5 span {
+    display: block;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.text_section5 p {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+#section5 .white_button a {
+    border: 1px solid #ede6d8;
+}
+
+
+/* ------------------- section6 -------------------- */
+#section6 .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#section6 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    /* flex 상태에서 세로 배치로 > jstify랑 align 가로 세로 바뀜 */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#section6 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section6 .with_slide {
+    width: 295px;
+    height: 495px;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #ede6d8;
+    margin-top: 80px;
+    position: relative;
+}
+
+#section6 .with_slide>img {
+    display: block;
+    width: 100%;
+    height: 330px;
+}
+
+#section6 {
+    width: 100%;
+    height: 850px;
+    background-color: #FFFCF5;
+    position: relative;
+}
+
+.inner_section6 {
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.with_name {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#section6 .with_name img {
+    display: block;
+    width: 64px;
+    height: 10px;
+}
+
+#section6 .with_name span {
+    display: block;
+    font-size: 14px;
+}
+
+#section6 .with_name span::after {
+    content: " | ";
+    color: #3a3632;
+    margin: 0 5px;
+}
+
+.with_tit {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.with_title {
+    padding-top: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 30px;
+}
+
+.with_title p {
+    font-weight: 500;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.with_title img {
+    display: block;
+    width: 149px;
+    height: 37px;
+}
+
+#section6 .swiper-button-next {
+    right: 200px;
+    background-image: url(../imges/main/main6_right.png);
+}
+
+#section6 .swiper-button-prev {
+    left: 200px;
+    background-image: url(../imges/main/main6_left.png);
+}
+
+#section6 .swiper-button-next,
+#section6 .swiper-button-prev {
+    color: #ede6d8;
+    width: 30px;
+    height: 64px;
+    background-repeat: no-repeat;
+}
+
+#section6 .swiper-button-next svg,
+#section6 .swiper-button-prev svg {
+    display: none;
+}
+
+.with_slide:hover {
+    transform: translate(0, -40px);
+}
+
+.with_slide:hover .with_transform {
+    transform: translate(0, -0px);
+    display: block;
+}
+
+.with_transform {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.yellow_button a {
+    color: #f4d58d;
+    border: 1px solid #f4d58d;
+    font-size: 14px;
+    margin-top: 160px;
+}
+
+/* **************************** 방향키 굵기 조절 방법 ********************** */
